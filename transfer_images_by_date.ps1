@@ -55,3 +55,5 @@ switch ($CameraBrand) {
 Get-ChildItem -Path "$($CameraFolder.SelectedPath)" -Recurse -File -Filter "*.$Fileformat" | ForEach-Object {
     exiftool -o . -d "$($StorageFolder.SelectedPath)\$DateDirFormat" "-directory<datetimeoriginal" $_.FullName
 }
+
+Read-Host "Сopying completed"
